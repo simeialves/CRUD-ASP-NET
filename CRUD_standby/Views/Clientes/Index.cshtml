@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CRUD_standby.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Novo Cliente</a>
+    @*@DateTime.Now*@
+</p>
+<p>
+    <table>
+        <tr>
+            <td>
+                @using (Html.BeginForm("Index", "Clientes"))
+                {
+                    <h7>Razão Social:</h7>
+                    @Html.TextBox("RazaoSocial")
+
+                    <h7>CNPJ:</h7>
+                    @Html.TextBox("Cnpj")
+                <td>
+                    <fieldset data-role="controlgroup">
+                        <input type="radio" name="Status_cliente" id="radio-choice-v-2a" value="1" checked>
+                        <label for="radio-choice-v-2a">Ativo</label>
+                        <input type="radio" name="Status_cliente" id="radio-choice-v-2b" value="0">
+                        <label for="radio-choice-v-2b">Inativo</label>
+                    </fieldset>
+                </td>
+                <td>
+                    <input type="submit" id="Pesquisar" class="btn btn-primary" value="Pesquisar" />
+                </td>
+            }
+            </tr>
+        </table>
+    </p>
+
+@Html.Partial("_Clientes", Model)

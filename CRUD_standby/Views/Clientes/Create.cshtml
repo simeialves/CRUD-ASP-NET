@@ -1,0 +1,59 @@
+﻿@model CRUD_standby.Models.Cliente
+
+@{
+    ViewData["Title"] = "Create";
+}
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Razao_social" class="control-label">Razão Social</label>
+                <input asp-for="Razao_social" class="form-control" />
+                <span asp-validation-for="Razao_social" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Cnpj" class="control-label">CNPJ</label>
+                <input asp-for="Cnpj" class="form-control" />
+                <span asp-validation-for="Cnpj" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Data_fundacao" class="control-label">Data de Fundação</label>
+                <input asp-for="Data_fundacao" class="form-control" />
+                <span asp-validation-for="Data_fundacao" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Capital" class="control-label">Capital R$</label>
+                <input asp-for="Capital" class="form-control" />
+                <span asp-validation-for="Capital" class="text-danger"></span>
+            </div>
+            @*<fieldset data-role="controlgroup">
+                <input type="radio" name="Status_cliente" id="radio-choice-v-2a" value="1" checked>
+                <label for="radio-choice-v-2a">Ativo</label>
+                <input type="radio" name="Status_cliente" id="radio-choice-v-2b" value="0">
+                <label for="radio-choice-v-2b">Inativo</label>
+            </fieldset>*@
+            <div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" asp-for="Status_cliente" checked/> Status
+            </label>
+        </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
