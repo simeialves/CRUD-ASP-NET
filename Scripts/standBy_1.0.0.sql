@@ -11,4 +11,4 @@ CREATE TABLE [dbo].[clientes](
 	[quarentena] [bit] NULL,
 	[status_cliente] [bit] NULL,
 	[classificacao] [char](1) NULL
-);
+)
