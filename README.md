@@ -2,4 +2,4 @@
 
 Tela de Pesquisas:
 
-https://github.com/simeialves/CRUD_standby/blob/master/Imagens%20do%20Sistema/TelaPesquisa.png
+https://raw.githubusercontent.com/simeialves/CRUD_standby/master/Imagens%20do%20Sistema/TelaPesquisa.png
