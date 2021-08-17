@@ -1,4 +1,4 @@
-# CRUD_standby
+# CRUD
 
 * Asp.NET Core Web Aplication
 * EntityFramework
