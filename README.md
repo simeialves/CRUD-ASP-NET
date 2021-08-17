@@ -1,5 +1,11 @@
 # CRUD_standby
 
+* Asp.NET Core Web Aplication
+* EntityFramework
+* MVC
+* Injeção de Dependência
+* FluentValidation
+
 Tela de Pesquisas:
 
 ![alt text](https://raw.githubusercontent.com/simeialves/CRUD_standby/master/Imagens%20do%20Sistema/TelaPesquisa.png)
